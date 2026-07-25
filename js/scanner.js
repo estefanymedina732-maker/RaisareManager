@@ -17,7 +17,13 @@ function iniciarScanner() {
 
 }
 
-function qrDetectado(texto) {
+async function qrDetectado(texto) {
+
+    try{
+        await validarIngreso(texto);
+    }catch(e){
+        console.error(e);
+    }
 
     document.getElementById("resultado").className =
         "alert alert-success mt-4";

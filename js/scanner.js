@@ -17,21 +17,15 @@ function iniciarScanner() {
 
 }
 
-async function qrDetectado(texto) {
+function qrDetectado(texto) {
 
-    console.log("QR:", texto);
+    document.getElementById("resultado").className =
+        "alert alert-success mt-4";
 
-    try {
-
-        const resultado = await validarIngreso(texto);
-
-        console.log(resultado);
-
-    } catch(error){
-
-        console.error(error);
-
-    }
+    document.getElementById("resultado").innerHTML = `
+        <strong>QR detectado</strong><br>
+        ${texto}
+    `;
 
 }
 

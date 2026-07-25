@@ -19,19 +19,31 @@ function iniciarScanner() {
 
 async function qrDetectado(texto) {
 
-    try{
-        await validarIngreso(texto);
-    }catch(e){
-        console.error(e);
+    const resultado = await validarIngreso(texto);
+
+    const div = document.getElementById("resultado");
+
+    if(resultado.ok){
+
+        div.className = "alert alert-success mt-4";
+
+        div.innerHTML = `
+            <h4>✅ BOLETO VÁLIDO</h4>
+            <strong>${resultado.nombre}</strong><br>
+            ${resultado.tipo}
+        `;
+
+    }else{
+
+        div.className = "alert alert-danger mt-4";
+
+        div.innerHTML = `
+            <h4>🚫 ESTE BOLETO YA FUE UTILIZADO</h4>
+            <strong>${resultado.nombre}</strong><br>
+            Hora: ${resultado.hora}
+        `;
+
     }
-
-    document.getElementById("resultado").className =
-        "alert alert-success mt-4";
-
-    document.getElementById("resultado").innerHTML = `
-        <strong>QR detectado</strong><br>
-        ${texto}
-    `;
 
 }
 

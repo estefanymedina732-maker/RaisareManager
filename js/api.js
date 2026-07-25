@@ -106,8 +106,10 @@ async function obtenerBoleto(codigo) {
 
 async function validarIngreso(codigo){
 
-    await fetch(
+    const respuesta = await fetch(
         `${CONFIG.API_URL}?accion=validarIngreso&codigo=${encodeURIComponent(codigo)}`
     );
+
+    return await respuesta.json();
 
 }

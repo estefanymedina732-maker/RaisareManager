@@ -19,47 +19,17 @@ function iniciarScanner() {
 
 async function qrDetectado(texto) {
 
-    const resultado = await validarIngreso(texto);
+    console.log("QR:", texto);
 
-    const div = document.getElementById("resultado");
+    try {
 
-    if(resultado.ok){
+        const resultado = await validarIngreso(texto);
 
-        div.className = "alert alert-success mt-4";
+        console.log(resultado);
 
-        div.innerHTML = `
-            <h4>✅ ACCESO PERMITIDO</h4>
+    } catch(error){
 
-            <strong>${resultado.nombre}</strong><br>
-
-            Tipo: ${resultado.tipo}<br>
-
-            Hora: ${resultado.hora}
-        `;
-
-    }else{
-
-        if(resultado.motivo === "YA_INGRESO"){
-
-            div.className = "alert alert-danger mt-4";
-
-            div.innerHTML = `
-                <h4>🚫 ESTE BOLETO YA INGRESÓ</h4>
-
-                <strong>${resultado.nombre}</strong><br>
-
-                Hora de ingreso: ${resultado.hora}
-            `;
-
-        }else{
-
-            div.className = "alert alert-warning mt-4";
-
-            div.innerHTML = `
-                <h4>❌ BOLETO INVÁLIDO</h4>
-            `;
-
-        }
+        console.error(error);
 
     }
 

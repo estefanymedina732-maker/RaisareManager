@@ -1,0 +1,213 @@
+/* ===== CONTENEDOR ===== */
+
+.boleto-digital{
+
+    max-width:420px;
+    margin:auto;
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/* ===== ENCABEZADO ===== */
+
+
+.ticket-header{
+
+    background:
+        linear-gradient(
+            180deg,
+        #ff6cb7 0%,
+        #ff1f96 100%
+        );
+
+    padding:30px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.ticket-header img{
+
+    width:95px;
+
+    margin-bottom:15px;
+
+}
+
+.ticket-header h2{
+
+    font-size:2.3rem;
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+.ticket-header p{
+
+    margin-top:8px;
+
+    opacity:.95;
+
+}
+
+/* ===== CUERPO ===== */
+
+.ticket-body{
+
+    background:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ===== QR ===== */
+
+.ticket-qr{
+
+    width:230px;
+
+    height:230px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    border:4px solid #ff3b9d;
+
+    box-shadow:
+        0 0 25px rgba(255,20,147,.30);
+
+margin-bottom:25px;
+}
+
+/* ===== NOMBRE ===== */
+
+.ticket-name{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#7a0060;
+
+    letter-spacing:-1px;
+
+}
+
+/* ===== CÓDIGO ===== */
+
+.ticket-code{
+
+    color:#7a7a7a;
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+}
+
+/* ===== BADGES ===== */
+
+.ticket-badges{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.ticket-badge{
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+.badge-general{
+
+    background:#ff2c92;
+
+}
+
+.badge-disponible{
+
+    background:#31b74a;
+
+}
+
+/* ===== FOOTER ===== */
+
+.ticket-footer{
+
+    border-top:2px dashed #ffd1e8;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.ticket-info{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    margin-bottom:25px;
+
+}
+
+.ticket-item{
+
+    text-align:center;
+
+}
+
+.ticket-item i{
+
+    color:#ff2c92;
+
+    font-size:1.4rem;
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+.ticket-phrase{
+
+    color:#ff2c92;
+
+    font-size:1.2rem;
+
+    font-style:italic;
+
+}
